@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* resetting css */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* declaring global variables */
+:root {
+    --primary-color: blue;
+    --dark-color: black; 
+    --light-color: white;
+    --lose-color: red;
+    --win-color: green;
+    --modal-duration: 1s;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1{
+    margin: 1rem;
+}
+
+#scores{
+    display: flex;
+    flex-basis: 50%;
+    color: var(--light-color);
+    margin:0.25rem;
+    width: 50vw;
+}
+
+#scores p#player{
+    background-color: var(--primary-color);
+    text-align: center;
+    flex-basis: 50%;
+    padding: 0.25rem;
+}
+
+#scores p#computer{
+    background-color: var(--dark-color);
+    text-align: center;
+    flex-basis: 50%;
+    padding: 0.25rem;
+}
+
+#selection{
+    margin-top: 1.25rem;
+}
+
+.choices{
+    margin: 0.5rem;
+}
+
+.choices i{
+    margin: 4rem;
+    cursor: pointer;
+}
+
+.choices i:hover{
+    color: var(--primary-color);
+}
+
+.restart-btn{
+    display:none;
+    border: 2px solid var(--light-color);
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding:0rem 0rem;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0.25rem;
+    margin-bottom: 0.7rem;
+    padding: 0.2rem;
+}
+
+.restart-btn:hover{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+@media(max-width:700px){
+    .choice{
+        font-size:90px;
+    }
+    .choices i{
+        margin:1.5rem;
+    }
+}
+@media(max-width:500px){
+    .choice{
+        font-size:68px;
+    }
+    .choices i{
+        margin:1rem;
+    }
+}
